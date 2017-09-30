@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Needs
+  ================================================== -->
+    <title>OFFSIDE</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Voting - Give your feedback for each player in each team">
+    <meta name="author" content="Offside">
+    <meta name="keywords" content="Sports News Feedback Vote Voting">
+    <!-- Favicons
+  ================================================== -->
+    <link rel="shortcut icon" href="images/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/favicon-152.png">
+    <!-- Mobile Specific Metas
+  ================================================== -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <!-- Google Web Fonts
+  ================================================== -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CSource+Sans+Pro:400,700" rel="stylesheet">
+    <!-- CSS
+  ================================================== -->
+    <!-- Vendor CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link href="css/style.css" rel="stylesheet"> </head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top another-navbar">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#">Offside</a> </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Voting</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#myModal">Login/Register</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><img src="images/avatar-1.jpg" alt="" /> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- Modal / Start -->
+    <!-- Modal -->
+    <div class="modal fade modal-navbar" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn btn-default pull-right" data-dismiss="modal"><i class="fa fa-close"></i></button>
+                    <div class="row">
+                        <div class="btn-login">
+                            <button type="button" class="btn log">Login</button>
+                            <button type="button" class="btn reg">Register</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="login-form" id="modal-login">
+                            <div class="heading5">
+                                <h4>Login To your<span> Account</span></h4> </div>
+                            <form>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email" id="email"> </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="pwd" placeholder="Password"> </div>
+                                <div class="form-group pass-forget">
+                                    <label class="checkbox">
+                                        <input type="checkbox"> Remember me</label> <a href="#" class="pull-right">Forgot your password?</a> </div>
+                                <div class="sbmt">
+                                    <button type="submit" class="btn btn-default btn-block">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="login-form" id="modal-register">
+                            <div class="heading5">
+                                <h4>Register<span> Now!</span></h4> </div>
+                            <form action="login.php" method="post">
+                                <div class="form-group">
+                                    <input type="name" name="user" placeholder="User name" class="form-control"> </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Email" class="form-control"> </div>
+                                <div class="form-group">
+                                    <input type="password" placeholder="Password" class="form-control"> </div>
+                                <div class="form-group">
+                                    <input type="password" placeholder="Confirm Password" class="form-control"> </div>
+                                <div class="sbmt">
+                                    <button type="submit" class="btn btn-default btn-block">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar  -->
+    
+    <!-- Start Matches Section  -->
+
+    <section class="under-nav">
+        <div class="post-main match-page">
+            <div class="container">
+                <div class="row">
+                    <div class="posts-tab">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs col-md-offset-4" role="tablist">
+                            <li role="presentation" class="active"><a href="#all" aria-controls="all" role="tab" data-toggle="tab">All</a></li>
+                            <li role="presentation"><a href="#spain" aria-controls="spain" role="tab" data-toggle="tab">Spain</a></li>
+                            <li role="presentation"><a href="#england" aria-controls="england" role="tab" data-toggle="tab">England</a></li>
+                            <li role="presentation"><a href="#german" aria-controls="german" role="tab" data-toggle="tab">German</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row tab-content">
+                    <!--   All News       -->
+                    <div role="tabpanel" class="tab-pane fade in active" id="all">
+                        <div class="row latest-match">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Favourit Matches</h3> </div>
+                                <div class="panel-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <div class="content">
+                                                <!--    First Team's Logo       -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                 <img src="images/logos/alahly.png" alt="Al-Ahly">
+                                                </span>
+                                                <!--    First Team's Name            -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>AL-Ahly Egyptian Club</h2>
+                                                </span>
+                                                <!--    First Team's Scores      -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>3</h2>
+                                                </span> 
+
+                                                <span class="col-xs-12 col-sm-2 voting">
+                                                  <div>
+                                                      <p>4/2/2017</p>
+                                                      <a href="#">Vote Now!</a>
+                                                  </div>
+                                                </span>
+                                                <!--    Second Team's Scores               -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>2</h2>
+                                                </span>
+                                                <!--    Second Team's Name               -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>Real Madrid Real Madrid</h2>
+                                                </span>
+                                                <!--    Second Team's Logo        -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                  <img src="images/logos/realmadrid.png" alt="Al-Ahly">
+                                                </span> 
+                                            </div>
+                                        </li>
+
+
+                                         <li class="list-group-item">
+                                            <div class="content">
+                                                <!--    First Team's Logo       -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                 <img src="images/logos/alahly.png" alt="Al-Ahly">
+                                                </span>
+                                                <!--    First Team's Name            -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>AL-Ahly</h2>
+                                                </span>
+                                                <!--    First Team's Scores      -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>3</h2>
+                                                </span> 
+
+                                                <span class="col-xs-12 col-sm-2 voting">
+                                                  <div>
+                                                      <p>4/2/2017</p>
+                                                      <a href="#">Vote Now!</a>
+                                                  </div>
+                                                </span>
+                                                <!--    Second Team's Scores               -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>2</h2>
+                                                </span>
+                                                <!--    Second Team's Name               -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>Real Madrid</h2>
+                                                </span>
+                                                <!--    Second Team's Logo        -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                  <img src="images/logos/realmadrid.png" alt="Al-Ahly">
+                                                </span> 
+                                            </div>
+                                        </li>
+
+
+
+                                         <li class="list-group-item">
+                                            <div class="content">
+                                                <!--    First Team's Logo       -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                 <img src="images/logos/alahly.png" alt="Al-Ahly">
+                                                </span>
+                                                <!--    First Team's Name            -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>AL-Ahly</h2>
+                                                </span>
+                                                <!--    First Team's Scores      -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>3</h2>
+                                                </span> 
+
+                                                <span class="col-xs-12 col-sm-2 voting">
+                                                  <div>
+                                                      <p>4/2/2017</p>
+                                                      <a href="#">Vote Now!</a>
+                                                  </div>
+                                                </span>
+                                                <!--    Second Team's Scores               -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>2</h2>
+                                                </span>
+                                                <!--    Second Team's Name               -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>Real Madrid</h2>
+                                                </span>
+                                                <!--    Second Team's Logo        -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                  <img src="images/logos/realmadrid.png" alt="Al-Ahly">
+                                                </span> 
+                                            </div>
+                                        </li>
+
+
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--   Spain League News       -->
+                    <div role="tabpanel" class="tab-pane fade out " id="spain"> 
+                      
+                        <div class="row latest-match">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Spain League</h3> </div>
+                                <div class="panel-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <div class="content">
+                                                <!--    First Team's Logo       -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                 <img src="images/logos/alahly.png" alt="Al-Ahly">
+                                                </span>
+                                                <!--    First Team's Name            -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>AL-Ahly</h2>
+                                                </span>
+                                                <!--    First Team's Scores      -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>3</h2>
+                                                </span> 
+
+                                                <span class="col-xs-12 col-sm-2 voting">
+                                                  <div>
+                                                      <p>4/2/2017</p>
+                                                      <a href="#">Vote Now!</a>
+                                                  </div>
+                                                </span>
+                                                <!--    Second Team's Scores               -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>2</h2>
+                                                </span>
+                                                <!--    Second Team's Name               -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>Real Madrid</h2>
+                                                </span>
+                                                <!--    Second Team's Logo        -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                  <img src="images/logos/realmadrid.png" alt="Al-Ahly">
+                                                </span> 
+                                            </div>
+                                        </li>
+
+
+                                         <li class="list-group-item">
+                                            <div class="content">
+                                                <!--    First Team's Logo       -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                 <img src="images/logos/alahly.png" alt="Al-Ahly">
+                                                </span>
+                                                <!--    First Team's Name            -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>AL-Ahly</h2>
+                                                </span>
+                                                <!--    First Team's Scores      -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>3</h2>
+                                                </span> 
+
+                                                <span class="col-xs-12 col-sm-2 voting">
+                                                  <div>
+                                                      <p>4/2/2017</p>
+                                                      <a href="#">Vote Now!</a>
+                                                  </div>
+                                                </span>
+                                                <!--    Second Team's Scores               -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>2</h2>
+                                                </span>
+                                                <!--    Second Team's Name               -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>Real Madrid</h2>
+                                                </span>
+                                                <!--    Second Team's Logo        -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                  <img src="images/logos/realmadrid.png" alt="Al-Ahly">
+                                                </span> 
+                                            </div>
+                                        </li>
+
+
+
+                                         <li class="list-group-item">
+                                            <div class="content">
+                                                <!--    First Team's Logo       -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                 <img src="images/logos/alahly.png" alt="Al-Ahly">
+                                                </span>
+                                                <!--    First Team's Name            -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>AL-Ahly</h2>
+                                                </span>
+                                                <!--    First Team's Scores      -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>3</h2>
+                                                </span> 
+
+                                                <span class="col-xs-12 col-sm-2 voting">
+                                                  <div>
+                                                      <p>4/2/2017</p>
+                                                      <a href="#">Vote Now!</a>
+                                                  </div>
+                                                </span>
+                                                <!--    Second Team's Scores               -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>2</h2>
+                                                </span>
+                                                <!--    Second Team's Name               -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>Real Madrid</h2>
+                                                </span>
+                                                <!--    Second Team's Logo        -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                  <img src="images/logos/realmadrid.png" alt="Al-Ahly">
+                                                </span> 
+                                            </div>
+                                        </li>
+
+
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                                     
+                    </div>
+                    <!--   England League News       -->
+                    <div role="tabpanel" class="tab-pane fade in " id="england">
+
+
+                        <div class="row latest-match">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">England League</h3> </div>
+                                <div class="panel-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <div class="content">
+                                                <!--    First Team's Logo       -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                 <img src="images/logos/alahly.png" alt="Al-Ahly">
+                                                </span>
+                                                <!--    First Team's Name            -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>AL-Ahly</h2>
+                                                </span>
+                                                <!--    First Team's Scores      -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>3</h2>
+                                                </span> 
+
+                                                <span class="col-xs-12 col-sm-2 voting">
+                                                  <div>
+                                                      <p>4/2/2017</p>
+                                                      <a href="#">Vote Now!</a>
+                                                  </div>
+                                                </span>
+                                                <!--    Second Team's Scores               -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>2</h2>
+                                                </span>
+                                                <!--    Second Team's Name               -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>Real Madrid</h2>
+                                                </span>
+                                                <!--    Second Team's Logo        -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                  <img src="images/logos/realmadrid.png" alt="Al-Ahly">
+                                                </span> 
+                                            </div>
+                                        </li>
+
+
+                                         <li class="list-group-item">
+                                            <div class="content">
+                                                <!--    First Team's Logo       -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                 <img src="images/logos/alahly.png" alt="Al-Ahly">
+                                                </span>
+                                                <!--    First Team's Name            -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>AL-Ahly</h2>
+                                                </span>
+                                                <!--    First Team's Scores      -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>3</h2>
+                                                </span> 
+
+                                                <span class="col-xs-12 col-sm-2 voting">
+                                                  <div>
+                                                      <p>4/2/2017</p>
+                                                      <a href="#">Vote Now!</a>
+                                                  </div>
+                                                </span>
+                                                <!--    Second Team's Scores               -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>2</h2>
+                                                </span>
+                                                <!--    Second Team's Name               -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>Real Madrid</h2>
+                                                </span>
+                                                <!--    Second Team's Logo        -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                  <img src="images/logos/realmadrid.png" alt="Al-Ahly">
+                                                </span> 
+                                            </div>
+                                        </li>
+
+
+
+                                         <li class="list-group-item">
+                                            <div class="content">
+                                                <!--    First Team's Logo       -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                 <img src="images/logos/alahly.png" alt="Al-Ahly">
+                                                </span>
+                                                <!--    First Team's Name            -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>AL-Ahly</h2>
+                                                </span>
+                                                <!--    First Team's Scores      -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>3</h2>
+                                                </span> 
+
+                                                <span class="col-xs-12 col-sm-2 voting">
+                                                  <div>
+                                                      <p>4/2/2017</p>
+                                                      <a href="#">Vote Now!</a>
+                                                  </div>
+                                                </span>
+                                                <!--    Second Team's Scores               -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>2</h2>
+                                                </span>
+                                                <!--    Second Team's Name               -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>Real Madrid</h2>
+                                                </span>
+                                                <!--    Second Team's Logo        -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                  <img src="images/logos/realmadrid.png" alt="Al-Ahly">
+                                                </span> 
+                                            </div>
+                                        </li>
+
+
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--   German League News       -->
+                    <div role="tabpanel" class="tab-pane fade in " id="german"> 
+
+                          <div class="row latest-match">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">German League</h3> </div>
+                                <div class="panel-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <div class="content">
+                                                <!--    First Team's Logo       -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                 <img src="images/logos/alahly.png" alt="Al-Ahly">
+                                                </span>
+                                                <!--    First Team's Name            -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>AL-Ahly</h2>
+                                                </span>
+                                                <!--    First Team's Scores      -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>3</h2>
+                                                </span> 
+
+                                                <span class="col-xs-12 col-sm-2 voting">
+                                                  <div>
+                                                      <p>4/2/2017</p>
+                                                      <a href="#">Vote Now!</a>
+                                                  </div>
+                                                </span>
+                                                <!--    Second Team's Scores               -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>2</h2>
+                                                </span>
+                                                <!--    Second Team's Name               -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>Real Madrid</h2>
+                                                </span>
+                                                <!--    Second Team's Logo        -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                  <img src="images/logos/realmadrid.png" alt="Al-Ahly">
+                                                </span> 
+                                            </div>
+                                        </li>
+
+
+                                         <li class="list-group-item">
+                                            <div class="content">
+                                                <!--    First Team's Logo       -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                 <img src="images/logos/alahly.png" alt="Al-Ahly">
+                                                </span>
+                                                <!--    First Team's Name            -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>AL-Ahly</h2>
+                                                </span>
+                                                <!--    First Team's Scores      -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>3</h2>
+                                                </span> 
+
+                                                <span class="col-xs-12 col-sm-2 voting">
+                                                  <div>
+                                                      <p>4/2/2017</p>
+                                                      <a href="#">Vote Now!</a>
+                                                  </div>
+                                                </span>
+                                                <!--    Second Team's Scores               -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>2</h2>
+                                                </span>
+                                                <!--    Second Team's Name               -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>Real Madrid</h2>
+                                                </span>
+                                                <!--    Second Team's Logo        -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                  <img src="images/logos/realmadrid.png" alt="Al-Ahly">
+                                                </span> 
+                                            </div>
+                                        </li>
+
+
+
+                                         <li class="list-group-item">
+                                            <div class="content">
+                                                <!--    First Team's Logo       -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                 <img src="images/logos/alahly.png" alt="Al-Ahly">
+                                                </span>
+                                                <!--    First Team's Name            -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>AL-Ahly</h2>
+                                                </span>
+                                                <!--    First Team's Scores      -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>3</h2>
+                                                </span> 
+
+                                                <span class="col-xs-12 col-sm-2 voting">
+                                                  <div>
+                                                      <p>4/2/2017</p>
+                                                      <a href="#">Vote Now!</a>
+                                                  </div>
+                                                </span>
+                                                <!--    Second Team's Scores               -->
+                                                <span class="col-xs-2 col-sm-1 result">
+                                                  <h2>2</h2>
+                                                </span>
+                                                <!--    Second Team's Name               -->
+                                                <span class="col-xs-8 col-sm-3 team-name">
+                                                  <h2>Real Madrid</h2>
+                                                </span>
+                                                <!--    Second Team's Logo        -->
+                                                <span class="col-xs-2 col-sm-1 logo">
+                                                  <img src="images/logos/realmadrid.png" alt="Al-Ahly">
+                                                </span> 
+                                            </div>
+                                        </li>
+
+
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Modal for Edit -->
+        </div>
+        
+        
+    </section>
+    <!-- Footer / Start -->
+    <footer>
+        <div class="inner-footer">
+            <div class="container">
+                <div class="row footer-primary">
+                    <div class="col-sm-12 col-md-6 footer-info">
+                        <h3>OFFSIDE</h3>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisi nel elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipisi nel elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipisi nel elit, sed do eiusmod tempor incididunt </p>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-6 footer-sunscribe">
+                        <h3>Subscribe to receive updates</h3>
+                        <form action="" method="post">
+                            <div class="form-group col-xs-12 col-sm-9 col-md-9">
+                                <input type="email" class="form-control" placeholder="your email address" autocomplete="on"> </div>
+                            <div class="sbmt col-xs-12 form-group">
+                                <button type="submit" class="btn">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="container">
+                <div class="row footer-scondary">
+                    <h3 class="col-xs-12 text-center copyright">Copyright &copy; 2017 <a href="https://www.offside.com">OFFSIDE</a> All rights reserved.</h3> </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer / End -->
+    <!-- Javascript Files
+  ================================================== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/fileinput.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

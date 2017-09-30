@@ -1,434 +1,540 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-
-  <!-- Basic Page Needs
+    <!-- Basic Page Needs
   ================================================== -->
-  <title>OFFSIDE</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Voting - Give your feedback for each player in each team">
-  <meta name="author" content="Offside">
-  <meta name="keywords" content="Sports News Feedback Vote Voting">
-
-  <!-- Favicons
+    <title>OFFSIDE</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Voting - Give your feedback for each player in each team">
+    <meta name="author" content="Offside">
+    <meta name="keywords" content="Sports News Feedback Vote Voting">
+    <!-- Favicons
   ================================================== -->
-  <link rel="shortcut icon" href="images/favicons/favicon.ico">
-  <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/favicon-120.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/favicon-152.png">
-
-  <!-- Mobile Specific Metas
+    <link rel="shortcut icon" href="images/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/favicon-152.png">
+    <!-- Mobile Specific Metas
   ================================================== -->
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-
-  <!-- Google Web Fonts
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <!-- Google Web Fonts
   ================================================== -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CSource+Sans+Pro:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CSource+Sans+Pro:400,700" rel="stylesheet">
 
-  <!-- CSS
+    <!-- CSS
   ================================================== -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/style2.css" rel="stylesheet">
-</head>
+    <!-- Vendor CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link href="css/style.css" rel="stylesheet"> </head>
+
 <body>
-
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Offside</a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Articles</a></li>
-          <li><a href="#">Voting</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#" data-toggle="modal" data-target="#myModal">Login/Register</a></li>
-          <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><img src="images/avatar-1.jpg" alt="" /> <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="#">Logout</a></li>
-          </ul>
-        </li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-
-  <!-- Modal / Start -->
-
-  <!-- Modal -->
-  <div class="modal fade modal-navbar" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-
-      <div class="modal-body">
-        <button type="button" class="btn btn-default pull-right" data-dismiss="modal"><i class="fa fa-close"></i></button>
-
-          <div class="row">
-
-              <div class="btn-login">
-                  <button type="button" class="btn log">Login</button>
-                  <button type="button" class="btn reg">Register</button>
-              </div>
-
-          </div>
-          <div class="row">
-            <div class="login-form" id="modal-login">
-              <div class="heading5">
-                <h4>Login To your<span> Account</span></h4>
-              </div>
-              <form>
-                <div class="form-group">
-                  <input type="email" class="form-control" placeholder="Email" id="email">
-                </div>
-                <div class="form-group">
-                  <input type="password" class="form-control" id="pwd" placeholder="Password">
-                </div>
-                <div class="form-group pass-forget">
-                  <label class="checkbox"><input type="checkbox"> Remember me</label>
-                  <a href="#" class="pull-right">Forgot your password?</a>
-                </div>
-                <div class="sbmt">
-                    <button type="submit" class="btn btn-default btn-block">Login</button>
-                </div>
-
-              </form>
-            </div>
-
-            <div class="login-form" id="modal-register">
-
-              <div class="heading5">
-                <h4>Register<span> Now!</span></h4>
-              </div>
-              <form action="login.php" method="post">
-
-                <div class="form-group">
-                  <input type="name" name="user" placeholder="User name" class="form-control">
-                </div>
-
-                <div class="form-group">
-                  <input type="email" name="email"  placeholder="Email" class="form-control" >
-                </div>
-                <div class="form-group">
-                  <input type="password"  placeholder="Password" class="form-control">
-                </div>
-                <div class="form-group">
-                  <input type="password" placeholder="Confirm Password" class="form-control">
-                </div>
-
-                <div class="sbmt">
-                    <button type="submit" class="btn btn-default btn-block">Register</button>
-                </div>
-              </form>
-            </div>
-
-          </div>
-      </div>
-
-    </div>
-  </div>
-  </div>
-
-
-<section class="under-nav">
-
-<div class="post-main">
-
-<div class="article-body">
-
-  <div class="container">
-    <div class="row">
-
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">
-            Lorem ipsum dolor sit amet, consectetur adipisi nel elit
-          </h3>
-        </div>
-        <div class="panel-body">
-          <p>
-            <img class="myImg-modal" src="images/_soccer_post-img3.jpg" alt="Image">
-              Lorem ipsum dolor sit amet, consectetur adipisi nel elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini veniam, quis nostrud en derum sum laborem.Lorem ipsum dolor sit amet, consectetur adipisi nel elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini veniam, quis nostrud en derum sum laborem. Lorem ipsum dolor sit amet, consectetur adipisi nel elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              <img class="myImg-modal" src="images/_soccer_post-img3.jpg" alt="Treka">
-               Ut enim ad mini veniam, quis nostrud en derum sum laborem.Lorem ipsum dolor sit amet, consectetur adipisi nel elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini veniam, quis nostrud en derum sum laborem.
-          </p>
-        </div>
-        <div class="panel-footer">
-          <button class="btn like" name="button">Like</button>
-          <button class="btn like comment-article" name="button">Comment</button>
-          <button class="btn like" name="button">Share</button>
-
-          <!-- Form to Add comment -->
-          <form action="" method="post" class="add-article-comment">
-            <div class="form-group">
-              <textarea class="form-control" placeholder="Write a comment"></textarea>
-            </div>
-
-            <span class="btn btn-file">
-              <i class="fa fa-camera"></i> <input type="file">
-            </span>
-
-            <div class="sbmt">
-                <button type="submit" class="btn btn-default">comment</button>
-            </div>
-          </form>
-
-
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-<div class="comments">
-
-  <div class="container">
-
-      <div class="row">
-
-        <div class="comments-container">
-
-
-          <div class="alert alert-default">
-            <h4 class="text-danger">Comments for this article</h4>
-          </div>
-
-          <!-- loop here to display all comments -->
-
-            <ul class="comments-list">
-              <!-- Original Comment / Start  -->
-                 <div class="comment-main-level">
-                   <!-- User Image for Comment Owner -->
-                   <div class="col-xs-3 comment-avatar"><img src="images/avatar-1.jpg" alt=""></div>
-
-                   <!-- User name and Time and React Icons  -->
-                   <div class="col-xs-9 comment-box">
-                     <div class="comment-head">
-                       <!-- user name -->
-                       <h6 class="comment-name by-author"><a href="#">Ahmed Hdeawy</a></h6>
-                       <!-- time -->
-                       <span>from 20 minutos</span>
-                        <!-- Like and Reply Icons -->
-                       <i class="fa fa-reply rep-comment"></i>
-                       <i class="fa fa-heart"></i>
-                     </div>
-
-                     <!-- Comment contents -->
-                     <div class="comment-content">
-                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-                     </div>
-                   </div>
-
-                 </div>
-              <!-- Original Comment / End -->
-
-              <!-- Replies / Start  -->
-                <ul class="comments-list reply-list">
-
-                  <!-- Loop Here to get all replies --->
-                    <li>
-                        <!-- User Image for Reply Owner-->
-                          <div class="col-xs-3 comment-avatar"><img src="images/avatar-1.jpg" alt=""></div>
-                          <!-- For Reply User name and Time -->
-                          <div class="col-xs-9 comment-box">
-                           <div class="comment-head">
-                             <h6 class="comment-name"><a href="#">Yasien</a></h6>
-                             <span>from 10 minutos</span>
-                           </div>
-
-                           <!-- Reply Content  -->
-                           <div class="comment-content">
-                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-                           </div>
-                          </div>
+    <nav class="navbar navbar-default navbar-fixed-top another-navbar">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#">Offside</a> </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Voting</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#myModal">Login/Register</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><img src="images/avatar-1.jpg" alt="" /> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
                     </li>
-
-                    <!-- Another Reply -->
-                    <li>
-                      <!-- User Image for Reply Owner-->
-                        <div class="col-xs-3 comment-avatar"><img src="images/avatar-1.jpg" alt=""></div>
-                        <!-- For Reply User name and Time -->
-                        <div class="col-xs-9 comment-box">
-                         <div class="comment-head">
-                           <h6 class="comment-name"><a href="#">Mohamed</a></h6>
-                           <span>from 10 minutos</span>
-                         </div>
-
-                         <!-- Reply Content  -->
-                         <div class="comment-content">
-                           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-                         </div>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- Modal / Start -->
+    <!-- Modal -->
+    <div class="modal fade modal-navbar" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn btn-default pull-right" data-dismiss="modal"><i class="fa fa-close"></i></button>
+                    <div class="row">
+                        <div class="btn-login">
+                            <button type="button" class="btn log">Login</button>
+                            <button type="button" class="btn reg">Register</button>
                         </div>
-                    </li>
-
-                    <!-- Reply Box this box will generates with each comment -->
-                    <li class="reply-box">
-                        <div class="panel panel-default">
-                            <div class="panel-footer">
-                              <form action="" method="post">
+                    </div>
+                    <div class="row">
+                        <div class="login-form" id="modal-login">
+                            <div class="heading5">
+                                <h4>Login To your<span> Account</span></h4> </div>
+                            <form>
                                 <div class="form-group">
-                                  <textarea class="form-control" placeholder="Reply"></textarea>
+                                    <input type="email" class="form-control" placeholder="Email" id="email"> </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="pwd" placeholder="Password"> </div>
+                                <div class="form-group pass-forget">
+                                    <label class="checkbox">
+                                        <input type="checkbox"> Remember me</label> <a href="#" class="pull-right">Forgot your password?</a> </div>
+                                <div class="sbmt">
+                                    <button type="submit" class="btn btn-default btn-block">Login</button>
                                 </div>
+                            </form>
+                        </div>
+                        <div class="login-form" id="modal-register">
+                            <div class="heading5">
+                                <h4>Register<span> Now!</span></h4> </div>
+                            <form action="login.php" method="post">
+                                <div class="form-group">
+                                    <input type="name" name="user" placeholder="User name" class="form-control"> </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Email" class="form-control"> </div>
+                                <div class="form-group">
+                                    <input type="password" placeholder="Password" class="form-control"> </div>
+                                <div class="form-group">
+                                    <input type="password" placeholder="Confirm Password" class="form-control"> </div>
+                                <div class="sbmt">
+                                    <button type="submit" class="btn btn-default btn-block">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="under-nav">
+        <div class="article-page">
+            <div class="container">
+                <div class="row">
+                    <section class="col-md-12">
 
-                                <span class="btn btn-file">
+                        <!-- Artcile Body  -->
+                        <div class="article-body col-md-8">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                Zlatan Ibrahimovic: Manchester United striker not offered new contract
+                              </h3> </div>
+                                <div class="panel-body">
+                                    <p> <img class="myImg-modal" src="images/abutreka.jpg" alt="Image"> Lorem ipsum dolor sit amet, consectetur adipisi nel elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini veniam, quis nostrud en derum sum laborem.Lorem ipsum dolor sit amet, consectetur adipisi nel elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini veniam, quis nostrud en derum sum laborem. Lorem ipsum dolor sit amet, consectetur adipisi nel elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <img class="myImg-modal" src="images/abutreka.jpg" alt="Treka"> Ut enim ad mini veniam, quis nostrud en derum sum laborem.Lorem ipsum dolor sit amet, consectetur adipisi nel elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini veniam, quis nostrud en derum sum laborem. </p>
+                                </div>
+                                <!--   Footer for Display Tags      -->
+                                <div class="panel-footer">
+                                    <h2 class="btn tags">
+                                  <i class="fa fa-tags" aria-hidden="true"></i> Tags:
+                              </h2>
+                                    <div class="tags-links"> <a href="#" class="tag-link">Spain</a> <a href="#" class="tag-link">Italy</a> <a href="#" class="tag-link">German</a> </div>
+                                </div>
+                                <!--       Second Footer for Likes and comments      -->
+                                <div class="panel-footer">
+                                    <!-- <button class="btn like" name="button"> <i class="fa fa-thumbs-up" aria-hidden="true"></i> </button>
+                                    <button class="btn like comment-article" name="button"> <i class="fa fa-comment" aria-hidden="true"></i> </button>
+                                    <button class="btn like" name="button"> <i class="fa fa-share-alt" aria-hidden="true"></i> </button> -->
+                                    <ul class="article-info">
+                                     <li>
+                                         <button class="btn btn-sm">like <i class="fa fa-thumbs-o-up"></i></button>
+                                     </li>
+                                     <li class="comment-article">
+                                         <button class="btn btn-sm">comment <i class="fa fa-comment-o"></i></button>
+                                     </li>
+                                     <li>
+                                         <button data-href="#reply-input-1" class="btn btn-sm rep-comment">reply <i class="fa fa-reply"></i></button>
+                                     </li>
+                                   </ul>
+
+                                    <!-- Form to Add comment -->
+                                    <form action="" method="post" class="add-article-comment">
+                                        <div class="form-group">
+                                            <textarea class="form-control" placeholder="Write a comment"></textarea>
+                                        </div> <span class="btn btn-file">
                                   <i class="fa fa-camera"></i> <input type="file">
                                 </span>
-
-                                <div class="sbmt">
-                                    <button type="submit" class="btn btn-default">Reply</button>
+                                        <div class="sbmt">
+                                            <button type="submit" class="btn btn-default">comment</button>
+                                        </div>
+                                    </form>
                                 </div>
-                              </form>
                             </div>
                         </div>
-                    </li>
-               </ul>
-              <!-- Replies / End -->
 
-            </ul> <!-- Comment / End -->
+                        <!-- Related  -->
+                        <section class="related col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Related Articles</h3> </div>
+                                <div class="panel-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item"> <span class="image">
+                                    <img src="images/zaltan.jpg" class="img-thumbnail img-responsive" alt="Article">
+                                    </span> <span class="content">
+                                        <a href="#">
+                                            Manchester United agree fee with Benfica for Victor LindelofManchester United agree fee with Benfica for Victor Lindelof
+                                        </a>
+                                      </span> </li>
+                                            <li class="list-group-item"> <span class="image">
+                                        <img src="images/zaltan.jpg" class="img-thumbnail img-responsive" alt="Article">
+                                    </span> <span class="content">
+                                        <a href="#">
+                                            Manchester United agree fee with Benfica for Victor LindelofManchester United agree fee with Benfica for Victor Lindelof
+                                        </a>
+                                      </span> </li>
+                                            <li class="list-group-item"> <span class="image">
+                                        <img src="images/zaltan.jpg" class="img-thumbnail img-responsive" alt="Article">
+                                    </span> <span class="content">
+                                        <a href="#">
+                                            Manchester United agree fee with Benfica for Victor LindelofManchester United agree fee with Benfica for Victor Lindelof
+                                        </a>
+                                      </span> </li>
+                                            <li class="list-group-item"> <span class="image">
+                                        <img src="images/zaltan.jpg" class="img-thumbnail img-responsive" alt="Article">
+                                    </span> <span class="content">
+                                    <a href="#">
+                                        Manchester United agree fee with Benfica for Victor LindelofManchester United agree fee with Benfica for Victor Lindelof
+                                    </a>
+                                  </span> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
 
 
 
-          <!-- ============= Another Comment =============-->
+
+                    </section>
+
+                     <section class="col-md-8">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3>Comments</h3>
+                                </div>
+                                <div class="panel-body">
+
+                                    <!-- Comments  -->
+                        <div class="comments">
+                            <div class="comments-container">
+                                <div class="alert alert-default">
+
+                                <!-- loop here to display all comments -->
+                                <ul class="comments-list">
+                                    <!-- Original Comment / Start  -->
+                                    <div class="comment-main-level">
+                                        <!-- User Image for Comment Owner -->
+                                        <div class="col-xs-3 comment-avatar"><img src="images/avatar-1.jpg" alt=""></div>
+                                        <!-- User name and Time and React Icons  -->
+                                        <div class="col-xs-12 col-md-10 comment-box">
+                                            <div class="comment-head">
+                                                <!-- user name -->
+                                                <h6 class="comment-name by-author"><a href="#">Ahmed Hdeawy</a></h6>
+                                                <!-- time --><span>from 20 minutos</span>
+                                                <!-- Edit and Delete Comment -->
+                                                <button class="remove-comment">
+                                                  <i class="fa fa-remove"></i>
+                                                </button>
+                                                <button class="edit-comment">
+                                                  <i class="fa fa-pencil-square-o rep-comment"></i>
+                                                </button>
+
+                                             </div>
+                                            <!-- Comment contents -->
+                                            <div class="comment-content"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo? </div>
+                                            <div class="input-edit">
+                                              <form class="form-edit" action="index.php" method="post">
+                                                  <textarea name="edit-comment" class="form-control"></textarea>
+                                                  <input type="submit" class="btn " name="btn-edit" value="Edit">
+                                              </form>
+                                            </div>
+                                            <div class="rep-box">
+                                              <!-- Like and Reply Icons -->
+                                              <ul class="article-info">
+                                               <li>
+                                                   <button class="btn btn-sm">like <i class="fa fa-thumbs-o-up"></i></button>
+                                               </li>
+                                               <li>
+                                                   <button data-href="#reply-input-1" class="btn btn-sm rep-comment">reply <i class="fa fa-reply"></i></button>
+                                               </li>
+                                             </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Original Comment / End -->
+                                    <!-- Replies / Start  -->
+                                    <ul class="comments-list reply-list">
+                                        <!-- Loop Here to get all replies --->
+                                        <li>
+                                            <!-- User Image for Reply Owner-->
+                                            <div class="col-xs-3 comment-avatar"><img src="images/avatar-1.jpg" alt=""></div>
+                                            <!-- For Reply User name and Time -->
+                                            <div class="col-xs-12 col-md-10 comment-box">
+                                                <div class="comment-head">
+                                                    <h6 class="comment-name"><a href="#">Yasien</a></h6> <span>from 10 minutos</span>
 
 
-          <ul class="comments-list">
-            <!-- Original Comment / Start  -->
-               <div class="comment-main-level">
-                 <!-- User Image for Comment Owner -->
-                 <div class="col-xs-3 comment-avatar"><img src="images/avatar-1.jpg" alt=""></div>
+                                                    <!-- Edit and Delete Comment -->
+                                                    <button class="remove-comment">
+                                                      <i class="fa fa-remove"></i>
+                                                    </button>
+                                                    <button class="edit-comment">
+                                                      <i class="fa fa-pencil-square-o rep-comment"></i>
+                                                    </button>
+                                                  </div>
 
-                 <!-- User name and Time and React Icons  -->
-                 <div class="col-xs-9 comment-box">
-                   <div class="comment-head">
-                     <!-- user name -->
-                     <h6 class="comment-name by-author"><a href="#">Ahmed Hdeawy</a></h6>
-                     <!-- time -->
-                     <span>from 20 minutos</span>
-                      <!-- Like and Reply Icons -->
-                     <i class="fa fa-reply rep-comment"></i>
-                     <i class="fa fa-heart"></i>
-                   </div>
+                                                <!-- Reply Content  -->
+                                                <div class="comment-content"> Yas: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+                                                </div>
+                                                <div class="input-edit">
+                                                  <form class="form-edit" action="index.php" method="post">
+                                                      <textarea name="edit-comment" class="form-control"></textarea>
+                                                      <input type="submit" class="btn " name="btn-edit" value="Edit">
+                                                  </form>
+                                                </div>
 
-                   <!-- Comment contents -->
-                   <div class="comment-content">
-                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-                   </div>
-                 </div>
+                                            </div>
+                                        </li>
+                                        <!-- Another Reply -->
+                                        <li>
+                                            <!-- User Image for Reply Owner-->
+                                            <div class="col-xs-3 comment-avatar"><img src="images/avatar-1.jpg" alt=""></div>
+                                            <!-- For Reply User name and Time -->
+                                            <div class="col-xs-12 col-md-10 comment-box">
+                                                <div class="comment-head">
+                                                    <h6 class="comment-name"><a href="#">Mohame</a></h6> <span>from 10 minutos</span>
 
-               </div>
-            <!-- Original Comment / End -->
 
-            <!-- Replies / Start  -->
-              <ul class="comments-list reply-list">
+                                                    <!-- Edit and Delete Comment -->
+                                                    <button class="remove-comment">
+                                                      <i class="fa fa-remove"></i>
+                                                    </button>
+                                                    <button class="edit-comment">
+                                                      <i class="fa fa-pencil-square-o rep-comment"></i>
+                                                    </button>
+                                                  </div>
 
-                <!-- Loop Here to get all replies --->
-                  <li>
-                      <!-- User Image for Reply Owner-->
-                        <div class="col-xs-3 comment-avatar"><img src="images/avatar-1.jpg" alt=""></div>
-                        <!-- For Reply User name and Time -->
-                        <div class="col-xs-9 comment-box">
-                         <div class="comment-head">
-                           <h6 class="comment-name"><a href="#">Yasien</a></h6>
-                           <span>from 10 minutos</span>
-                         </div>
+                                                <!-- Reply Content  -->
+                                                <div class="comment-content"> Mohamed: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+                                                </div>
+                                                <div class="input-edit">
+                                                  <form class="form-edit" action="index.php" method="post">
+                                                      <textarea name="edit-comment" class="form-control"></textarea>
+                                                      <input type="submit" class="btn " name="btn-edit" value="Edit">
+                                                  </form>
+                                                </div>
 
-                         <!-- Reply Content  -->
-                         <div class="comment-content">
-                           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-                         </div>
+                                            </div>
+                                        </li>
+                                        <!-- Reply Box this box will generates with each comment -->
+                                        <li class="reply-box">
+                                            <div class="panel panel-default">
+                                                <div class="panel-footer">
+                                                    <form action="" method="post" id="reply-input-1">
+                                                        <div class="form-group">
+                                                            <textarea class="form-control" name="reply-area" placeholder="Reply"></textarea>
+                                                        </div> <span class="btn btn-file">
+                                  <i class="fa fa-camera"></i> <input type="file">
+                                </span>
+                                                        <div class="sbmt">
+                                                            <button type="submit" class="btn btn-default">Reply</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- Replies / End -->
+                                </ul>
+                                <!-- Comment / End -->
+                                <!-- ============= Another Comment =============-->
+                                <ul class="comments-list">
+                                    <!-- Original Comment / Start  -->
+                                    <div class="comment-main-level">
+                                        <!-- User Image for Comment Owner -->
+                                        <div class="col-xs-3 comment-avatar"><img src="images/avatar-1.jpg" alt=""></div>
+                                        <!-- User name and Time and React Icons  -->
+                                        <div class="col-xs-12 col-md-10 comment-box">
+                                            <div class="comment-head">
+                                                <!-- user name -->
+                                                <h6 class="comment-name by-author"><a href="#">Ahmed Hdeawy</a></h6>
+                                                <!-- time --><span>from 20 minutos</span>
+                                                <!-- Edit and Delete Comment -->
+                                                <button class="remove-comment">
+                                                  <i class="fa fa-remove"></i>
+                                                </button>
+                                                <button class="edit-comment">
+                                                  <i class="fa fa-pencil-square-o rep-comment"></i>
+                                                </button>
+
+                                             </div>
+                                            <!-- Comment contents -->
+                                            <div class="comment-content"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo? </div>
+                                            <div class="input-edit">
+                                              <form class="form-edit" action="index.php" method="post">
+                                                  <textarea name="edit-comment" class="form-control"></textarea>
+                                                  <input type="submit" class="btn " name="btn-edit" value="Edit">
+                                              </form>
+                                            </div>
+                                            <div class="rep-box">
+                                              <!-- Like and Reply Icons -->
+                                              <ul class="article-info">
+                                               <li>
+                                                   <button class="btn btn-sm">like <i class="fa fa-thumbs-o-up"></i></button>
+                                               </li>
+                                               <li>
+                                                   <button data-href="#reply-input-1" class="btn btn-sm rep-comment">reply <i class="fa fa-reply"></i></button>
+                                               </li>
+                                             </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Original Comment / End -->
+                                    <!-- Replies / Start  -->
+                                    <ul class="comments-list reply-list">
+                                        <!-- Loop Here to get all replies --->
+                                        <li>
+                                            <!-- User Image for Reply Owner-->
+                                            <div class="col-xs-3 comment-avatar"><img src="images/avatar-1.jpg" alt=""></div>
+                                            <!-- For Reply User name and Time -->
+                                            <div class="col-xs-12 col-md-10 comment-box">
+                                                <div class="comment-head">
+                                                    <h6 class="comment-name"><a href="#">Yasien</a></h6> <span>from 10 minutos</span>
+
+
+                                                    <!-- Edit and Delete Comment -->
+                                                    <button class="remove-comment">
+                                                      <i class="fa fa-remove"></i>
+                                                    </button>
+                                                    <button class="edit-comment">
+                                                      <i class="fa fa-pencil-square-o rep-comment"></i>
+                                                    </button>
+                                                  </div>
+
+                                                <!-- Reply Content  -->
+                                                <div class="comment-content"> Yas: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+                                                </div>
+                                                <div class="input-edit">
+                                                  <form class="form-edit" action="index.php" method="post">
+                                                      <textarea name="edit-comment" class="form-control"></textarea>
+                                                      <input type="submit" class="btn " name="btn-edit" value="Edit">
+                                                  </form>
+                                                </div>
+
+                                            </div>
+                                        </li>
+                                        <!-- Another Reply -->
+                                        <li>
+                                            <!-- User Image for Reply Owner-->
+                                            <div class="col-xs-3 comment-avatar"><img src="images/avatar-1.jpg" alt=""></div>
+                                            <!-- For Reply User name and Time -->
+                                            <div class="col-xs-12 col-md-10 comment-box">
+                                                <div class="comment-head">
+                                                    <h6 class="comment-name"><a href="#">Mohame</a></h6> <span>from 10 minutos</span>
+
+
+                                                    <!-- Edit and Delete Comment -->
+                                                    <button class="remove-comment">
+                                                      <i class="fa fa-remove"></i>
+                                                    </button>
+                                                    <button class="edit-comment">
+                                                      <i class="fa fa-pencil-square-o rep-comment"></i>
+                                                    </button>
+                                                  </div>
+
+                                                <!-- Reply Content  -->
+                                                <div class="comment-content"> Mohamed: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+                                                </div>
+                                                <div class="input-edit">
+                                                  <form class="form-edit" action="index.php" method="post">
+                                                      <textarea name="edit-comment" class="form-control"></textarea>
+                                                      <input type="submit" class="btn " name="btn-edit" value="Edit">
+                                                  </form>
+                                                </div>
+
+                                            </div>
+                                        </li>
+                                        <!-- Reply Box this box will generates with each comment -->
+                                        <li class="reply-box">
+                                            <div class="panel panel-default">
+                                                <div class="panel-footer">
+                                                    <form action="" method="post" id="reply-input-1">
+                                                        <div class="form-group">
+                                                            <textarea class="form-control" name="reply-area" placeholder="Reply"></textarea>
+                                                        </div> <span class="btn btn-file">
+                                  <i class="fa fa-camera"></i> <input type="file">
+                                </span>
+                                                        <div class="sbmt">
+                                                            <button type="submit" class="btn btn-default">Reply</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- Replies / End -->
+                                </ul>
+                                <!-- Comment / End -->
+                            </div>
                         </div>
-                  </li>
 
-                  <!-- Another Reply -->
-                  <li>
-                    <!-- User Image for Reply Owner-->
-                      <div class="col-xs-3 comment-avatar"><img src="images/avatar-1.jpg" alt=""></div>
-                      <!-- For Reply User name and Time -->
-                      <div class="col-xs-9 comment-box">
-                       <div class="comment-head">
-                         <h6 class="comment-name"><a href="#">Mohamed</a></h6>
-                         <span>from 10 minutos</span>
-                       </div>
+                                </div>
+                            </div>
+                        </section>
 
-                       <!-- Reply Content  -->
-                       <div class="comment-content">
-                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-                       </div>
-                      </div>
-                  </li>
-
-                  <!-- Reply Box this box will generates with each comment -->
-                  <li class="reply-box">
-                      <div class="panel panel-default">
-                          <div class="panel-footer">
-                            <form action="" method="post">
-                              <div class="form-group">
-                                <textarea class="form-control" placeholder="Reply"></textarea>
-                              </div>
-
-                              <span class="btn btn-file">
-                                <i class="fa fa-camera"></i> <input type="file">
-                              </span>
-
-                              <div class="sbmt">
-                                  <button type="submit" class="btn btn-default">Reply</button>
-                              </div>
-                            </form>
-                          </div>
-                      </div>
-                  </li>
-             </ul>
-            <!-- Replies / End -->
-
-          </ul> <!-- Comment / End -->
-
-
+                </div>
+            </div>
         </div>
-      </div>
-
-  </div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- Modal Image in Large -->
-
-<div id="Modal-image" class="Modal-image">
-  <span class="close-btn-modal">&times;</span>
-  <img class="Modal-image-content" id="img01">
-  <div id="caption-img"></div>
-</div>
-
-<!-- Modal Image in Large / End-->
-
-
-
-  <!-- Javascript Files
+        <!-- Modal Image in Large -->
+        <div id="Modal-image" class="Modal-image"> <span class="close-btn-modal">&times;</span> <img class="Modal-image-content" id="img01">
+            <div id="caption-img"></div>
+        </div>
+        <!-- Modal Image in Large / End-->
+    </section>
+    <!-- Footer / Start -->
+    <footer>
+        <div class="inner-footer">
+            <div class="container">
+                <div class="row footer-primary">
+                    <div class="col-sm-12 col-md-6 footer-info">
+                        <h3>OFFSIDE</h3>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisi nel elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipisi nel elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipisi nel elit, sed do eiusmod tempor incididunt </p>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-6 footer-sunscribe">
+                        <h3>Subscribe to receive updates</h3>
+                        <form action="" method="post">
+                            <div class="form-group col-xs-12 col-sm-9 col-md-9">
+                                <input type="email" class="form-control" placeholder="your email address" autocomplete="on"> </div>
+                            <div class="sbmt col-xs-12 form-group">
+                                <button type="submit" class="btn">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="container">
+                <div class="row footer-scondary">
+                    <h3 class="col-xs-12 text-center copyright">Copyright &copy; 2017 <a href="https://www.offside.com">OFFSIDE</a> All rights reserved.</h3> </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer / End -->
+    <!-- Javascript Files
   ================================================== -->
-
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/typed.js"></script>
-<script src="js/custom.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/fileinput.min.js"></script>
+    <script src="js/custom.js"></script>
 </body>
+
 </html>

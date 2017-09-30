@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Needs
+  ================================================== -->
+    <title>OFFSIDE</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Voting - Give your feedback for each player in each team">
+    <meta name="author" content="Offside">
+    <meta name="keywords" content="Sports News Feedback Vote Voting">
+    <!-- Favicons
+  ================================================== -->
+    <link rel="shortcut icon" href="images/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/favicon-152.png">
+    <!-- Mobile Specific Metas
+  ================================================== -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <!-- Google Web Fonts
+  ================================================== -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CSource+Sans+Pro:400,700" rel="stylesheet">
+<<<<<<< HEAD
+=======
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+>>>>>>> d9f10695cec05ee102dfd3a16ffaade71fab61b9
+    <!-- CSS
+  ================================================== -->
+    <!-- Vendor CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link href="css/style.css" rel="stylesheet"> </head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top another-navbar">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#">Offside</a> </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Voting</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#myModal">Login/Register</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><img src="images/avatar-1.jpg" alt="" /> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- Modal / Start -->
+    <!-- Modal -->
+    <div class="modal fade modal-navbar" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn btn-default pull-right" data-dismiss="modal"><i class="fa fa-close"></i></button>
+                    <div class="row">
+                        <div class="btn-login">
+                            <button type="button" class="btn log">Login</button>
+                            <button type="button" class="btn reg">Register</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="login-form" id="modal-login">
+                            <div class="heading5">
+                                <h4>Login To your<span> Account</span></h4> </div>
+                            <form>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email" id="email"> </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="pwd" placeholder="Password"> </div>
+                                <div class="form-group pass-forget">
+                                    <label class="checkbox">
+                                        <input type="checkbox"> Remember me</label> <a href="#" class="pull-right">Forgot your password?</a> </div>
+                                <div class="sbmt">
+                                    <button type="submit" class="btn btn-default btn-block">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="login-form" id="modal-register">
+                            <div class="heading5">
+                                <h4>Register<span> Now!</span></h4> </div>
+                            <form action="login.php" method="post">
+                                <div class="form-group">
+                                    <input type="name" name="user" placeholder="User name" class="form-control"> </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Email" class="form-control"> </div>
+                                <div class="form-group">
+                                    <input type="password" placeholder="Password" class="form-control"> </div>
+                                <div class="form-group">
+                                    <input type="password" placeholder="Confirm Password" class="form-control"> </div>
+                                <div class="sbmt">
+                                    <button type="submit" class="btn btn-default btn-block">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="under-nav">
+
+        <div class="results-page">
+<<<<<<< HEAD
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h2>Reults</h2>
+                </div>
+
+                <div class="panel-body">
+                     <ul class="list-group">
+                      <li class="list-group-item">
+                          <div class="row">
+                          <div class="col-md-4">
+                              <span>Ahmed</span>
+                          </div>
+                              <div class="col-md-8 progress">
+                              <div class="progress-bar progress-bar-striped progress-bar-warning active" role="progressbar"
+                              aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                40%
+                              </div>
+                          </div>
+                       </div>
+                      </li>
+                      <li class="list-group-item">Yasien Mohamed <span class="badge">5</span></li>
+                      <li class="list-group-item">Ahmed Hdeawy <span class="badge">3</span></li>
+                       <li class="list-group-item">Ahmed Hdeawy <span class="badge">7</span></li>
+                      <li class="list-group-item">Yasien Mohamed <span class="badge">5</span></li>
+                      <li class="list-group-item">Ahmed Hdeawy <span class="badge">3</span></li>
+                       <li class="list-group-item">Ahmed Hdeawy <span class="badge">7</span></li>
+                      <li class="list-group-item">Yasien Mohamed <span class="badge">5</span></li>
+                      <li class="list-group-item">Ahmed Hdeawy <span class="badge">3</span></li>
+                    </ul>
+=======
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="panel panel-primary">
+
+                        <div class="panel-body">
+
+                            <!--    Firt team Results    -->
+                            <div class="col-sm-12 col-md-6 result-section rs-1">
+                                <div class="result-heading">
+                                    <img src="images/logos/realmadrid.png" class="result-logo">
+                                    <span>Real Madrid</span>
+                                </div>
+                                <div class="voting-results">
+
+                                    <ul class="list-group" id="first-team">
+
+                                      <li class="list-group-item panel">
+                                          <span class="player-number">12</span>
+                                          <a href="#list-child-1" class="player-name-link" data-toggle="collapse" data-parent="#first-team">
+                                            <span class="player-name">Ahmed Hdeawy</span>
+                                          </a>
+                                          <span class="badge voting-number">9</span>
+                                          <div class="chart-collapsed collapse" id="list-child-1">
+                                              <canvas id="playerChart" height="200"></canvas>
+                                              
+                                          </div>
+                                      </li>
+
+                                      <li class="list-group-item panel">
+                                          <span class="player-number">22</span>
+                                          <a href="#list-child-2"  data-toggle="collapse"   data-parent="#first-team">
+                                            <span class="player-name">Yasien Mohamed</span>
+                                          </a>
+                                          <span class="badge voting-number">2</span>
+                                          <div class="chart-collapsed collapse" id="list-child-2">
+                                              <canvas id="playerChart2" height="200"></canvas>
+                                          </div>
+                                      </li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-6 result-section rs-3">
+                                <div class="result-heading">
+                                    <img src="images/logos/alahly.png" class="result-logo">
+                                    <span>Al-Ahly Egypt</span>
+                                </div>
+                                <div class="voting-results">
+
+                                    <ul class="list-group" id="second-team">
+
+                                      <li class="list-group-item panel">
+                                          <span class="player-number">12</span>
+
+                                          <a href="#list-child-3" class="player-name-link" data-toggle="collapse" data-parent="#second-team">
+                                            <span class="player-name">Ahmed Hdeawy</span>
+                                          </a>
+                                          
+                                          <span class="badge voting-number">3</span>
+                                          
+                                          <div class="chart-collapsed collapse" id="list-child-3">
+                                              Chart JS here
+                                              
+                                          </div>
+                                      </li>
+
+                                      <li class="list-group-item panel">
+                                          <span class="player-number">22</span>
+                                          <a href="#list-child-4"  data-toggle="collapse"   data-parent="#second-team">
+                                            <span class="player-name">Yasien Mohamed</span>
+                                          </a>
+                                          <span class="badge voting-number">7</span>
+                                          <div class="chart-collapsed collapse" id="list-child-4">
+                                              another Chart JS here
+                                          </div>
+                                      </li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+>>>>>>> d9f10695cec05ee102dfd3a16ffaade71fab61b9
+                </div>
+            </div>
+        </div>
+
+     </section>
+    <!-- Footer / Start -->
+    <footer>
+        <div class="inner-footer">
+            <div class="container">
+                <div class="row footer-primary">
+                    <div class="col-sm-12 col-md-6 footer-info">
+                        <h3>OFFSIDE</h3>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisi nel elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipisi nel elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipisi nel elit, sed do eiusmod tempor incididunt </p>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-6 footer-sunscribe">
+                        <h3>Subscribe to receive updates</h3>
+                        <form action="" method="post">
+                            <div class="form-group col-xs-12 col-sm-9 col-md-9">
+                                <input type="email" class="form-control" placeholder="your email address" autocomplete="on"> </div>
+                            <div class="sbmt col-xs-12 form-group">
+                                <button type="submit" class="btn">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="container">
+                <div class="row footer-scondary">
+                    <h3 class="col-xs-12 text-center copyright">Copyright &copy; 2017 <a href="https://www.offside.com">OFFSIDE</a> All rights reserved.</h3> </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer / End -->
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/fileinput.min.js"></script>
+<<<<<<< HEAD
+=======
+    <script src="js/Chart.min.js"></script>
+>>>>>>> d9f10695cec05ee102dfd3a16ffaade71fab61b9
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
